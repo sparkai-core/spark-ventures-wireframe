@@ -605,70 +605,34 @@ function CTASection() {
   return (
     <section
       id="cta"
-      className="bg-paper py-24 md:py-40 text-navy relative overflow-hidden border-t border-line"
+      className="bg-navy py-24 md:py-40 text-white relative overflow-hidden border-t border-white/10"
     >
-      <div className="relative mx-auto max-w-3xl px-6 text-center">
-        {/* Status pill — "Ready to start?" */}
-        <div className="inline-flex items-center gap-2 mb-6">
-          <span className="size-2 rounded-full bg-emerald" />
-          <span className="font-mono text-[10px] uppercase tracking-widest text-ink-muted">
-            Ready to start?
-          </span>
-        </div>
+      <div className="absolute inset-0 grid-bg opacity-40" />
+      <div className="absolute -top-1/2 left-1/2 -translate-x-1/2 size-[600px] rounded-full bg-blue/10 blur-3xl" />
 
-        {/* Headline */}
-        <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.02]">
+      <div className="relative mx-auto max-w-3xl px-6 text-center">
+        <div className="font-mono text-[10px] uppercase tracking-widest text-emerald mb-6">
+          ● Ready to start?
+        </div>
+        <h2 className="text-4xl md:text-7xl font-extrabold tracking-tight leading-[1.02]">
           Seen something that fits?
         </h2>
-
-        {/* Sub */}
-        <p className="mx-auto max-w-xl text-base md:text-lg text-ink-muted mt-6">
-          Book a call and we&rsquo;ll walk you through the right product for your market &mdash;
-          no pitch, just fit.
+        <p className="mx-auto max-w-xl text-base text-white/60 mt-6">
+          Book a call and we&rsquo;ll walk you through the right product for your market &mdash; no pitch, just fit.
         </p>
-
-        {/* CTAs */}
         <div className="flex flex-col md:flex-row gap-3 justify-center mt-10">
           <a
-            href="#contact"
-            className="bg-navy text-white px-8 py-5 text-xs font-bold uppercase tracking-widest hover:bg-blue transition"
+            href="#"
+            className="bg-blue px-8 py-5 text-xs font-bold uppercase tracking-widest hover:bg-blue/90 transition"
           >
             Book a Call &rarr;
           </a>
           <a
             href="#marketplace"
-            className="border border-navy text-navy px-8 py-5 text-xs font-bold uppercase tracking-widest hover:bg-navy hover:text-white transition"
+            className="border border-white/20 px-8 py-5 text-xs font-bold uppercase tracking-widest hover:bg-white/5 transition"
           >
             Browse AI Products
           </a>
-        </div>
-
-        {/* Trust micro-row */}
-        <div className="grid grid-cols-3 gap-3 mt-12 max-w-xl mx-auto">
-          <div className="border border-dashed border-line py-3 px-3 text-center">
-            <div className="font-mono text-[10px] uppercase tracking-widest text-navy">
-              15 Products
-            </div>
-            <div className="font-mono text-[9px] uppercase tracking-widest text-ink-muted mt-1">
-              Live
-            </div>
-          </div>
-          <div className="border border-dashed border-line py-3 px-3 text-center">
-            <div className="font-mono text-[10px] uppercase tracking-widest text-navy">
-              14–30d
-            </div>
-            <div className="font-mono text-[9px] uppercase tracking-widest text-ink-muted mt-1">
-              Launch
-            </div>
-          </div>
-          <div className="border border-dashed border-line py-3 px-3 text-center">
-            <div className="font-mono text-[10px] uppercase tracking-widest text-navy">
-              4 Continents
-            </div>
-            <div className="font-mono text-[9px] uppercase tracking-widest text-ink-muted mt-1">
-              Proven
-            </div>
-          </div>
         </div>
       </div>
     </section>
