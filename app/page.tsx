@@ -605,35 +605,70 @@ function CTASection() {
   return (
     <section
       id="cta"
-      className="bg-navy py-24 md:py-40 text-white relative overflow-hidden border-t border-white/10"
+      className="bg-paper py-24 md:py-40 text-navy relative overflow-hidden border-t border-line"
     >
-      <div className="absolute inset-0 grid-bg opacity-40" />
-      <div className="absolute -top-1/2 left-1/2 -translate-x-1/2 size-[600px] rounded-full bg-blue/10 blur-3xl" />
-
       <div className="relative mx-auto max-w-3xl px-6 text-center">
-        <div className="font-mono text-[10px] uppercase tracking-widest text-emerald mb-6">
-          ● Applications Open · 2026 Cohort
+        {/* Status pill — "Ready to start?" */}
+        <div className="inline-flex items-center gap-2 mb-6">
+          <span className="size-2 rounded-full bg-emerald" />
+          <span className="font-mono text-[10px] uppercase tracking-widest text-ink-muted">
+            Ready to start?
+          </span>
         </div>
-        <h2 className="text-4xl md:text-7xl font-extrabold tracking-tight leading-[1.02]">
-          You already have <br className="hidden md:block" />
-          the expertise. <span className="text-blue">We provide the infrastructure.</span>
+
+        {/* Headline */}
+        <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.02]">
+          Seen something that fits?
         </h2>
-        <p className="mx-auto max-w-xl text-base text-white/60 mt-6">
-          Launch an AI software company without spending years building products from scratch.
+
+        {/* Sub */}
+        <p className="mx-auto max-w-xl text-base md:text-lg text-ink-muted mt-6">
+          Book a call and we&rsquo;ll walk you through the right product for your market &mdash;
+          no pitch, just fit.
         </p>
+
+        {/* CTAs */}
         <div className="flex flex-col md:flex-row gap-3 justify-center mt-10">
           <a
-            href="#"
-            className="bg-blue px-8 py-5 text-xs font-bold uppercase tracking-widest hover:bg-blue/90 transition"
+            href="#contact"
+            className="bg-navy text-white px-8 py-5 text-xs font-bold uppercase tracking-widest hover:bg-blue transition"
           >
-            Book Founder Strategy Session
+            Book a Call &rarr;
           </a>
           <a
             href="#marketplace"
-            className="border border-white/20 px-8 py-5 text-xs font-bold uppercase tracking-widest hover:bg-white/5 transition"
+            className="border border-navy text-navy px-8 py-5 text-xs font-bold uppercase tracking-widest hover:bg-navy hover:text-white transition"
           >
-            Browse Venture Portfolio
+            Browse AI Products
           </a>
+        </div>
+
+        {/* Trust micro-row */}
+        <div className="grid grid-cols-3 gap-3 mt-12 max-w-xl mx-auto">
+          <div className="border border-dashed border-line py-3 px-3 text-center">
+            <div className="font-mono text-[10px] uppercase tracking-widest text-navy">
+              15 Products
+            </div>
+            <div className="font-mono text-[9px] uppercase tracking-widest text-ink-muted mt-1">
+              Live
+            </div>
+          </div>
+          <div className="border border-dashed border-line py-3 px-3 text-center">
+            <div className="font-mono text-[10px] uppercase tracking-widest text-navy">
+              14–30d
+            </div>
+            <div className="font-mono text-[9px] uppercase tracking-widest text-ink-muted mt-1">
+              Launch
+            </div>
+          </div>
+          <div className="border border-dashed border-line py-3 px-3 text-center">
+            <div className="font-mono text-[10px] uppercase tracking-widest text-navy">
+              4 Continents
+            </div>
+            <div className="font-mono text-[9px] uppercase tracking-widest text-ink-muted mt-1">
+              Proven
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -722,11 +757,11 @@ export default function Page() {
       <TrustLayer />
       <Methodology />
       <StackSection />
-      <Marketplace />
       <PartnershipPaths />
       <FounderProfile />
       <SequenceSection />
       <Portfolio />
+      <Marketplace />
       <NetworkSection />
       <FAQ />
       <CTASection />
