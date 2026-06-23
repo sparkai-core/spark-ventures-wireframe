@@ -104,27 +104,24 @@ function Hero() {
         <div className="relative mx-auto mb-12 max-w-3xl animate-fade-up-4">
           <div className="grid gap-2 md:grid-cols-5 md:items-stretch">
             <div className="relative border border-white/15 bg-white/[0.02] p-4 text-left">
-              <div className="font-mono text-[9px] uppercase tracking-widest mb-2 text-gold">Input</div>
               <div className="text-sm font-bold tracking-tight">What you know</div>
               <div className="font-mono text-[10px] text-white/50 mt-1">Expertise</div>
             </div>
-            <div className="hidden md:flex items-center justify-center">
-              <div className="h-px w-full bg-gradient-to-r from-white/10 via-white/40 to-white/10" />
+            <div className="hidden md:flex items-center justify-center text-2xl text-white/40 font-bold">
+              →
             </div>
             <div className="relative border border-blue/60 bg-blue/5 p-4 text-left">
-              <div className="font-mono text-[9px] uppercase tracking-widest mb-2 text-blue">Rail</div>
-              <div className="text-sm font-bold tracking-tight">Spark Infra.</div>
-              <div className="font-mono text-[10px] text-white/50 mt-1">Product · GTM · Ops</div>
+              <div className="text-sm font-bold tracking-tight">Spark Infrastructure</div>
+              <div className="font-mono text-[10px] text-white/50 mt-1">Product · GTM · Ops · Growth</div>
               <div className="absolute inset-x-0 bottom-0 h-px overflow-hidden">
                 <div className="h-px w-1/2 bg-blue animate-ticker" />
               </div>
             </div>
-            <div className="hidden md:flex items-center justify-center">
-              <div className="h-px w-full bg-gradient-to-r from-white/10 via-white/40 to-white/10" />
+            <div className="hidden md:flex items-center justify-center text-2xl text-white/40 font-bold">
+              →
             </div>
             <div className="relative border border-white/15 bg-white/[0.02] p-4 text-left">
-              <div className="font-mono text-[9px] uppercase tracking-widest mb-2 text-emerald">Output</div>
-              <div className="text-sm font-bold tracking-tight">Venture</div>
+              <div className="text-sm font-bold tracking-tight">A company you own</div>
               <div className="font-mono text-[10px] text-white/50 mt-1">Revenue · Equity</div>
             </div>
           </div>
