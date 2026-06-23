@@ -136,14 +136,14 @@ export default function Marketplace() {
             })}
           </div>
 
-          <div className="mt-10 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="mt-10 pt-6 border-t border-line flex flex-col md:flex-row items-center justify-between gap-4">
             <span className="font-mono text-[10px] uppercase tracking-widest text-ink-muted">
               Showing {String(visible.length).padStart(2, "0")} of {String(filtered.length).padStart(2, "0")} products
             </span>
             {hasMore && (
               <button
                 onClick={() => setShown((n) => n + PAGE_SIZE)}
-                className="border border-navy text-navy px-6 py-3 font-mono text-[10px] font-bold uppercase tracking-widest hover:bg-navy hover:text-white transition"
+                className="border border-navy rounded-full text-navy px-6 py-3 font-mono text-[10px] font-bold uppercase tracking-widest hover:bg-navy hover:text-white transition"
               >
                 Load More
               </button>
