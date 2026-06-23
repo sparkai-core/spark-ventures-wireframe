@@ -223,12 +223,15 @@ function Methodology() {
         <div className="grid gap-4 md:grid-cols-2">
           {/* Traditional Path */}
           <div className="border border-line bg-white p-6 md:p-8">
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="font-mono text-[10px] uppercase tracking-widest text-red-500">
-                Path / A — The Standard Route
-              </h3>
+            <div className="flex items-center justify-between mb-3">
+              <span className="font-mono text-[10px] uppercase tracking-widest text-red-500">
+                Path / A
+              </span>
               <span className="font-mono text-[10px] text-ink-muted">12–24 MO · HIGH RISK</span>
             </div>
+            <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight mb-6">
+              Traditional
+            </h3>
             <ol className="space-y-2">
               {TRADITIONAL_PATH.map((s) => (
                 <li
@@ -251,12 +254,15 @@ function Methodology() {
             <div className="absolute -top-3 left-6 bg-emerald px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-widest text-navy">
               Spark Route
             </div>
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="font-mono text-[10px] uppercase tracking-widest text-emerald">
-                Path / B — The Spark Route
-              </h3>
+            <div className="flex items-center justify-between mb-3">
+              <span className="font-mono text-[10px] uppercase tracking-widest text-emerald">
+                Path / B
+              </span>
               <span className="font-mono text-[10px] text-ink-muted">30 DAYS TO LIVE</span>
             </div>
+            <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight mb-6">
+              Venture Infra.
+            </h3>
             <ol className="space-y-2">
               {SPARK_PATH.map((s) => (
                 <li
