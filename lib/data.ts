@@ -214,13 +214,6 @@ export const SEQUENCE = [
   { step: "06", title: "First conversations", subtitle: "You're in market" },
 ];
 
-export const CASE_STUDIES = [
-  { id: "CS-01", industry: "Compliance", name: "Compliance AI", revenue: "$48K MRR", timeline: "28 days", body: "Built for HR compliance teams. Live in 28 days.", quote: "I had 18 years of regulatory ops in my head. Now it's a product." },
-  { id: "CS-02", industry: "Recruiting", name: "AI Recruiter", revenue: "$72K MRR", timeline: "First quarter", body: "Three enterprise accounts in the first quarter.", quote: "We had a book of clients. We needed software to scale them." },
-  { id: "CS-03", industry: "Marketing", name: "Marketing OS", revenue: "$110K MRR", timeline: "Year one", body: "Found its market in SMB. Now the category leader.", quote: "Services was working. SaaS was the unlock." },
-  { id: "CS-04", industry: "Construction", name: "Construction OS", revenue: "$36K MRR", timeline: "Regional rollout", body: "US regional rollout, expanding nationally.", quote: "Spreadsheets were holding back the whole industry." },
-];
-
 export const NETWORK_NODES = [
   { label: "Founders", color: "gold", x: 94, y: 50 },
   { label: "Operators", color: "emerald", x: 77.7, y: 84.2 },

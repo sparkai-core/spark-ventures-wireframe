@@ -6,12 +6,12 @@ import {
   PARTNERSHIPS,
   PERSONAS,
   SEQUENCE,
-  CASE_STUDIES,
   NETWORK_NODES,
 } from "@/lib/data";
 import FAQ from "@/components/FAQ";
 import TrackRecord from "@/components/TrackRecord";
 import FeaturedProductsPreview from "@/components/FeaturedProductsPreview";
+import Marketplace from "@/components/Marketplace";
 
 // Spark Ventures™ logo: navy square + pulsing blue dot
 function SparkLogo({ size = "size-6", dot = "size-2" }: { size?: string; dot?: string }) {
@@ -502,64 +502,6 @@ function SequenceSection() {
   );
 }
 
-// ===================== SECTION 08: PORTFOLIO =====================
-function Portfolio() {
-  return (
-    <section id="cases" className="bg-paper py-20 md:py-32">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="mb-12 md:mb-16">
-          <div className="font-mono text-[10px] uppercase tracking-widest text-blue mb-3">
-            [ 08 ] Results
-          </div>
-          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight max-w-3xl">
-            Companies that didn&rsquo;t exist two years ago.
-          </h2>
-        </div>
-
-        <div className="grid gap-4 md:grid-cols-2">
-          {CASE_STUDIES.map((c) => (
-            <article
-              key={c.id}
-              className="border border-line bg-white p-6 md:p-8 group hover:border-navy/30 transition"
-            >
-              <div className="flex items-center justify-between mb-6">
-                <span className="font-mono text-[10px] uppercase tracking-widest text-ink-muted">
-                  [ {c.id} ] · {c.industry}
-                </span>
-                <span className="font-mono text-[10px] uppercase tracking-widest text-emerald">
-                  ● Live
-                </span>
-              </div>
-              <div className="flex items-center gap-3 mb-3">
-                <span className="text-2xl md:text-3xl font-extrabold tracking-tight">→</span>
-                <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight">{c.name}</h3>
-              </div>
-              <p className="text-sm text-ink-muted mb-4">{c.body}</p>
-              <p className="text-sm italic text-navy/80 mb-6 border-l-2 border-emerald pl-4">
-                &ldquo;{c.quote}&rdquo;
-              </p>
-              <div className="grid grid-cols-2 gap-px bg-line border border-line">
-                <div className="bg-white p-4">
-                  <div className="font-mono text-[9px] uppercase tracking-widest text-ink-muted">
-                    Revenue
-                  </div>
-                  <div className="text-lg font-extrabold tracking-tight mt-1">{c.revenue}</div>
-                </div>
-                <div className="bg-white p-4">
-                  <div className="font-mono text-[9px] uppercase tracking-widest text-ink-muted">
-                    Timeline
-                  </div>
-                  <div className="text-lg font-extrabold tracking-tight mt-1">{c.timeline}</div>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 // ===================== SECTION 09: NETWORK =====================
 function NetworkSection() {
   return (
@@ -760,7 +702,7 @@ export default function Page() {
       <PartnershipPaths />
       <FounderProfile />
       <SequenceSection />
-      <Portfolio />
+      <Marketplace eyebrow="[ 04 ] Marketplace" title="Choose your AI venture." />
       <NetworkSection />
       <FAQ />
       <FeaturedProductsPreview />

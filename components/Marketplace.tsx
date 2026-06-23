@@ -17,7 +17,13 @@ const dotColor: Record<ProductAccent, string> = {
 
 const PAGE_SIZE = 6;
 
-export default function Marketplace() {
+export default function Marketplace({
+  eyebrow = "[ // ] Marketplace",
+  title = "AI Products.",
+}: {
+  eyebrow?: string;
+  title?: string;
+}) {
   const [filter, setFilter] = useState("All Systems");
   const [shown, setShown] = useState(PAGE_SIZE);
   const [hovered, setHovered] = useState<string | null>(null);
@@ -42,10 +48,10 @@ export default function Marketplace() {
           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-8">
             <div>
               <div className="font-mono text-[10px] uppercase tracking-widest text-blue mb-3">
-                [ // ] Marketplace
+                {eyebrow}
               </div>
               <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">
-                AI Products.
+                {title}
               </h1>
               <p className="mt-5 max-w-2xl text-base md:text-lg text-ink-muted">
                 Pick the market you know. We built the software for it. Every product below is
