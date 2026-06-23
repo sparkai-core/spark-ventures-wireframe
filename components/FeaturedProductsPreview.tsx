@@ -70,12 +70,18 @@ export default function FeaturedProductsPreview() {
                   </div>
                 </div>
                 {isHover && (
-                  <div className="mt-6 pt-5 border-t border-line">
+                  <div className="mt-6 pt-5 border-t border-line flex gap-2">
                     <a
                       href="/products"
                       className="inline-flex items-center gap-2 bg-navy text-white px-4 py-2 font-mono text-[10px] font-bold uppercase tracking-widest hover:bg-blue transition-colors"
                     >
-                      Book a Call <span>→</span>
+                      View Product <span>→</span>
+                    </a>
+                    <a
+                      href="#cta"
+                      className="inline-flex items-center gap-2 border border-navy text-navy px-4 py-2 font-mono text-[10px] font-bold uppercase tracking-widest hover:bg-navy hover:text-white transition-colors"
+                    >
+                      Apply for This
                     </a>
                   </div>
                 )}
