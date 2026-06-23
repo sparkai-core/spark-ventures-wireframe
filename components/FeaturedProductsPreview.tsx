@@ -39,7 +39,7 @@ export default function FeaturedProductsPreview() {
                 onMouseEnter={() => setHovered(p.id)}
                 onMouseLeave={() => setHovered(null)}
                 className={`bg-white p-6 md:p-8 transition-all relative ${
-                  isHover ? "shadow-xl shadow-navy/5 -translate-y-0.5" : ""
+                  isHover ? "shadow-[0_4px_14px_rgba(0,0,0,0.1)]" : ""
                 }`}
                 style={isHover ? { borderColor: "#2b2b2b" } : undefined}
               >
@@ -73,9 +73,9 @@ export default function FeaturedProductsPreview() {
                   <div className="mt-6 pt-5 border-t border-line">
                     <a
                       href="/products"
-                      className="inline-flex items-center gap-2 bg-navy text-white px-4 py-2 font-mono text-[10px] font-bold uppercase tracking-widest hover:bg-blue transition-colors"
+                      className="block w-full text-center bg-navy text-white rounded-full py-3 font-mono text-[10px] font-bold uppercase tracking-widest hover:bg-blue transition-colors"
                     >
-                      Book a Call <span>→</span>
+                      Book a Call
                     </a>
                   </div>
                 )}
