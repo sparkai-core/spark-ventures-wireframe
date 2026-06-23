@@ -28,15 +28,6 @@ function Navbar() {
   return (
     <nav className="sticky top-0 z-50 flex items-center justify-between border-b border-navy/5 bg-white/85 px-4 py-3 backdrop-blur-md md:px-8 gap-4">
       <div className="flex items-center gap-3">
-        {/* ← Home pill — always visible so users can always get home */}
-        <a
-          href="/"
-          className="flex items-center gap-1 border border-line px-3 py-1.5 rounded-full font-mono text-[10px] uppercase tracking-widest text-ink-muted hover:border-navy/40 hover:text-navy transition"
-        >
-          ← Home
-        </a>
-        {/* Vertical separator */}
-        <div className="w-px h-4 bg-line" />
         {/* Logo */}
         <a href="#top" className="flex items-center gap-2">
           <SparkLogo />
