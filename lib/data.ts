@@ -1,13 +1,6 @@
 // Static data for the Spark Ventures landing page
 // All content sourced from the wireframes (HTML specs)
 
-export const HERO_STATS = [
-  { label: "AI Products", value: "15+" },
-  { label: "Countries", value: "04" },
-  { label: "Launch Window", value: "30d" },
-  { label: "Founder Equity", value: "100%" },
-];
-
 export const TRUST_LAYER_STATS = [
   { value: "15+", label: "15+ products ready now" },
   { value: "30d", label: "30-day launch window" },

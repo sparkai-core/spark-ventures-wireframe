@@ -1,5 +1,4 @@
 import {
-  HERO_STATS,
   TRUST_LAYER_STATS,
   TRADITIONAL_PATH,
   SPARK_PATH,
@@ -56,7 +55,7 @@ function Navbar() {
 // ===================== HERO =====================
 function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden bg-navy pt-14 pb-20 text-white md:pt-24 md:pb-32">
+    <section id="top" className="relative overflow-hidden bg-navy pt-14 pb-12 text-white md:pt-24 md:pb-20">
       <div className="absolute inset-0 grid-bg opacity-60 pointer-events-none" />
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue/40 to-transparent" />
 
@@ -145,16 +144,6 @@ function Hero() {
           >
             Browse the Products
           </a>
-        </div>
-
-        {/* Stats */}
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10 border border-white/10">
-          {HERO_STATS.map((s) => (
-            <div key={s.label} className="bg-navy px-4 py-5 text-left">
-              <div className="font-mono text-[9px] uppercase tracking-widest text-white/40 mb-2">{s.label}</div>
-              <div className="text-2xl md:text-3xl font-extrabold tracking-tight">{s.value}</div>
-            </div>
-          ))}
         </div>
       </div>
     </section>
