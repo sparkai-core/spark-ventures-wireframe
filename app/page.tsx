@@ -689,7 +689,7 @@ function Footer() {
     <footer className="bg-navy text-white border-t border-white/10">
       <div className="mx-auto max-w-6xl px-6 py-16">
         <div className="grid gap-12 md:grid-cols-4">
-          <div className="md:col-span-2">
+          <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <SparkLogo size="size-5" dot="size-1.5" />
               <span className="font-mono text-xs font-bold uppercase tracking-tighter">
@@ -741,20 +741,26 @@ function Footer() {
               </li>
             </ul>
           </div>
+
+          <div>
+            <div className="font-mono text-[10px] uppercase tracking-widest text-white/30 mb-4">
+              Legal
+            </div>
+            <ul className="space-y-3">
+              <li className="text-xs font-bold uppercase tracking-widest hover:text-blue transition cursor-pointer">
+                Privacy Policy
+              </li>
+              <li className="text-xs font-bold uppercase tracking-widest hover:text-blue transition cursor-pointer">
+                Terms
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between gap-4">
+        <div className="mt-16 pt-8 border-t border-white/10">
           <span className="font-mono text-[10px] uppercase tracking-widest text-white/40">
             © 2026 Spark Ventures. All rights reserved.
           </span>
-          <div className="flex gap-6">
-            <span className="font-mono text-[10px] uppercase tracking-widest text-white/40 hover:text-white transition cursor-pointer">
-              Privacy Policy
-            </span>
-            <span className="font-mono text-[10px] uppercase tracking-widest text-white/40 hover:text-white transition cursor-pointer">
-              Terms
-            </span>
-          </div>
         </div>
       </div>
     </footer>
