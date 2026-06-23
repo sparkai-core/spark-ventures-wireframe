@@ -26,7 +26,7 @@ export default function TrackRecord() {
             Why Spark
           </div>
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight max-w-2xl">
-            Why Spark Ventures.
+            Why Start-up in a Box.
           </h2>
         </div>
 

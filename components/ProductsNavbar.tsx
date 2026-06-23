@@ -25,7 +25,7 @@ export default function ProductsNavbar() {
         <a href="/" className="flex items-center gap-2">
           <SparkLogo />
           <span className="font-mono text-xs font-bold tracking-tighter uppercase text-navy">
-            Spark Ventures<sup className="text-[7px]">™</sup>
+            Start-up in a Box<sup className="text-[7px]">™</sup>
           </span>
         </a>
       </div>

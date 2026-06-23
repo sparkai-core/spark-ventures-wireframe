@@ -2,7 +2,7 @@ import Marketplace from "@/components/Marketplace";
 import ProductsNavbar from "@/components/ProductsNavbar";
 
 export const metadata = {
-  title: "AI Products — Spark Ventures",
+  title: "AI Products — Start-up in a Box",
   description:
     "Pick the market you know. We built the software for it. Every product below is live, tested, and ready to take to customers.",
 };

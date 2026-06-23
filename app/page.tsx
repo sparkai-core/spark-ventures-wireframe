@@ -31,7 +31,7 @@ function Navbar() {
         <a href="#top" className="flex items-center gap-2">
           <SparkLogo />
           <span className="font-mono text-xs font-bold tracking-tighter uppercase text-navy">
-            Spark Ventures<sup className="text-[7px]">™</sup>
+            Start-up in a Box<sup className="text-[7px]">™</sup>
           </span>
         </a>
       </div>
@@ -91,7 +91,7 @@ function Hero() {
                 Founder Briefing
               </span>
               <span className="font-mono text-[9px] uppercase tracking-widest text-white/30 mt-2">
-                How Spark Ventures Works · 16:9
+                How Start-up in a Box Works · 16:9
               </span>
             </div>
             <div className="absolute bottom-0 left-0 right-0 h-px overflow-hidden">
@@ -592,7 +592,7 @@ function Footer() {
             <div className="flex items-center gap-2 mb-4">
               <SparkLogo size="size-5" dot="size-1.5" />
               <span className="font-mono text-xs font-bold uppercase tracking-tighter">
-                Spark Ventures<sup className="text-[7px]">™</sup>
+            Start-up in a Box<sup className="text-[7px]">™</sup>
               </span>
             </div>
             <p className="text-sm text-white/50 max-w-sm">
@@ -658,7 +658,7 @@ function Footer() {
 
         <div className="mt-16 pt-8 border-t border-white/10">
           <span className="font-mono text-[10px] uppercase tracking-widest text-white/40">
-            © 2026 Spark Ventures. All rights reserved.
+            © 2026 Start-up in a Box. All rights reserved.
           </span>
         </div>
       </div>

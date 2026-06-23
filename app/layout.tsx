@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Spark Ventures — Launch an AI Software Business in 30 Days",
+  title: "Start-up in a Box — Launch an AI Software Business in 30 Days",
   description:
     "The AI Venture Infrastructure™ platform. Choose proven AI products, plug into shared product, GTM and ops, and launch an AI software company in 30 days.",
   openGraph: {
-    title: "Spark Ventures — AI Venture Infrastructure™",
+    title: "Start-up in a Box — AI Venture Infrastructure™",
     description:
       "Launch an AI software business in 30 days using proven products and venture-grade infrastructure.",
     type: "website",
