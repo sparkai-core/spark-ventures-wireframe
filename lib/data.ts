@@ -239,10 +239,10 @@ export const NETWORK_NODES = [
 ];
 
 export const FAQ_ITEMS = [
+  { q: "Do I need a tech background?", a: "No. You need to know your industry and be willing to sell. We handle everything under the hood." },
   { q: "What does Spark own?", a: "Launch License: nothing. We take a monthly fee. Venture Partner: equity, in exchange for deeper involvement from our team." },
   { q: "How is this different from a franchise?", a: "A franchise gives you a territory. This gives you a company — software, customers, and equity you can eventually sell." },
   { q: "What happens after 30 days?", a: "You're in market. Monthly support continues. Strategy calls, network access, and a team that cares whether you're growing." },
-  { q: "What can I realistically earn?", a: "Our portfolio average is $60K MRR at six months. Some go faster, some take longer. That's the honest number." },
 ];
 
 // Featured Products Preview (3 cards on landing page)
