@@ -19,7 +19,7 @@ export default function FeaturedProductsPreview() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <div>
             <div className="font-mono text-[10px] uppercase tracking-widest text-blue mb-3">
-              [ 04 ] Featured Products
+              Featured Products
             </div>
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight max-w-2xl">
               Pick the market you know.

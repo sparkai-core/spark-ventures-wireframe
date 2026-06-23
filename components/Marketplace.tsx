@@ -16,7 +16,7 @@ const dotColor: Record<ProductAccent, string> = {
 };
 
 export default function Marketplace({
-  eyebrow = "[ // ] Marketplace",
+  eyebrow = "Marketplace",
   title = "AI Products.",
 }: {
   eyebrow?: string;

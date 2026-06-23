@@ -23,7 +23,7 @@ export default function TrackRecord() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-12 md:mb-16">
           <div className="font-mono text-[10px] uppercase tracking-widest text-emerald mb-3">
-            [ 04 ] Why Spark
+            Why Spark
           </div>
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight max-w-2xl">
             Why Spark Ventures.

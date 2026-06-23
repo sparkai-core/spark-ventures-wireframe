@@ -158,7 +158,7 @@ function TrustLayer() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <div>
             <div className="font-mono text-[10px] uppercase tracking-widest text-blue mb-3">
-              [ 01 ] The Case
+              The Case
             </div>
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight max-w-2xl">
               Building from scratch is a bet most people lose.
@@ -193,7 +193,7 @@ function Methodology() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-12 md:mb-16">
           <div className="font-mono text-[10px] uppercase tracking-widest text-blue mb-3">
-            [ 02 ] The Comparison
+            The Comparison
           </div>
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight max-w-2xl">
             Two paths. One costs you two years.
@@ -287,7 +287,7 @@ function StackSection() {
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="mb-12 md:mb-16">
           <div className="font-mono text-[10px] uppercase tracking-widest text-emerald mb-3">
-            [ 03 ] What You Get
+            What You Get
           </div>
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight max-w-3xl">
             Four things every software company needs. Pre-built.
@@ -336,7 +336,7 @@ function PartnershipPaths() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-12 md:mb-16">
           <div className="font-mono text-[10px] uppercase tracking-widest text-gold mb-3">
-            [ 05 ] Your Options
+            Your Options
           </div>
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight max-w-3xl">
             Two ways in. Both get you a real business.
@@ -402,7 +402,7 @@ function FounderProfile() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-12">
           <div className="font-mono text-[10px] uppercase tracking-widest text-blue mb-3">
-            [ 06 ] Who This Is For
+            Who This Is For
           </div>
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight max-w-3xl">
             This works if you know something.
@@ -455,7 +455,7 @@ function SequenceSection() {
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="mb-12 md:mb-16">
           <div className="font-mono text-[10px] uppercase tracking-widest text-emerald mb-3">
-            [ 07 ] The First 30 Days
+            The First 30 Days
           </div>
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight max-w-3xl">
             What actually happens from day one.
@@ -490,7 +490,7 @@ function NetworkSection() {
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="mb-12 md:mb-16 text-center">
           <div className="font-mono text-[10px] uppercase tracking-widest text-gold mb-3">
-            [ 09 ] The Network
+            The Network
           </div>
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight">You&rsquo;re not doing this alone.</h2>
           <p className="mx-auto max-w-2xl text-sm md:text-base text-white/60 mt-4">
@@ -682,7 +682,7 @@ export default function Page() {
       <PartnershipPaths />
       <FounderProfile />
       <SequenceSection />
-      <Marketplace eyebrow="[ 04 ] Marketplace" title="Choose your AI venture." />
+      <Marketplace eyebrow="Marketplace" title="Choose your AI venture." />
       <NetworkSection />
       <FAQ />
       <FeaturedProductsPreview />
