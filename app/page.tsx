@@ -669,7 +669,7 @@ function CTASection() {
             href="#"
             className="bg-blue px-8 py-5 text-xs font-bold uppercase tracking-widest hover:bg-blue/90 transition"
           >
-            Book a Call &rarr;
+            Book a Call
           </a>
           <a
             href="/products"
