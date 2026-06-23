@@ -349,11 +349,7 @@ function PartnershipPaths() {
             return (
               <div
                 key={p.tag}
-                className={`relative border p-6 md:p-8 ${
-                  isPrimary
-                    ? "border-blue bg-navy text-white shadow-2xl shadow-blue/10"
-                    : "border-line bg-white"
-                }`}
+                className="relative border border-line bg-white p-6 md:p-8 flex flex-col"
               >
                 <div className="flex items-center justify-between mb-6">
                   <span
@@ -364,45 +360,29 @@ function PartnershipPaths() {
                     [ {p.tag} ]
                   </span>
                   {p.recommended && (
-                    <span className="font-mono text-[10px] uppercase tracking-widest bg-blue text-white px-2 py-0.5">
+                    <span className="font-mono text-[10px] uppercase tracking-widest bg-navy text-white px-2 py-0.5">
                       ★ Recommended
                     </span>
                   )}
                 </div>
                 <h3 className="text-2xl font-extrabold tracking-tight">{p.title}</h3>
-                <p
-                  className={`text-xs uppercase font-mono tracking-widest mt-1 ${
-                    isPrimary ? "text-white/50" : "text-ink-muted"
-                  }`}
-                >
+                <p className="text-xs uppercase font-mono tracking-widest mt-1 text-ink-muted">
                   {p.subtitle}
                 </p>
 
                 <div className="mt-6 mb-2">
                   <div className="text-3xl font-extrabold tracking-tight">{p.price}</div>
-                  <div
-                    className={`font-mono text-[10px] uppercase tracking-widest mt-1 ${
-                      isPrimary ? "text-white/60" : "text-ink-muted"
-                    }`}
-                  >
+                  <div className="font-mono text-[10px] uppercase tracking-widest mt-1 text-ink-muted">
                     {p.priceSub}
                   </div>
                 </div>
 
-                <p
-                  className={`mt-6 text-sm leading-relaxed ${
-                    isPrimary ? "text-white/70" : "text-ink-muted"
-                  }`}
-                >
+                <p className="mt-6 text-sm leading-relaxed text-ink-muted">
                   {p.body}
                 </p>
 
                 <button
-                  className={`w-full py-3 text-xs font-bold uppercase tracking-widest transition ${
-                    isPrimary
-                      ? "bg-blue text-white hover:bg-blue/90"
-                      : "border border-navy text-navy hover:bg-navy hover:text-white"
-                  }`}
+                  className="w-full py-2 mt-auto border border-navy text-navy bg-white text-xs font-bold uppercase tracking-widest hover:bg-navy hover:text-white transition"
                 >
                   {p.button}
                 </button>
