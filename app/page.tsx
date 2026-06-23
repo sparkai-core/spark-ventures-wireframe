@@ -192,7 +192,7 @@ function Methodology() {
             The Comparison
           </div>
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight max-w-2xl">
-            Two paths. One costs you two years.
+            Most startups die before revenue.
           </h2>
         </div>
 
@@ -201,14 +201,13 @@ function Methodology() {
           <div className="border border-line bg-white p-6 md:p-8 flex flex-col">
             <div className="flex items-center justify-between mb-3">
               <span className="font-mono text-[10px] uppercase tracking-widest text-red-500">
-                Path / A
+                Traditional Startup
               </span>
-              <span className="font-mono text-[10px] uppercase tracking-widest text-ink-muted">12–24 MO · HIGH RISK</span>
+              <span className="font-mono text-[10px] uppercase tracking-widest text-ink-muted">
+                Path/A
+              </span>
             </div>
-            <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight mb-6">
-              Traditional
-            </h3>
-            <ol className="space-y-2">
+            <ol className="space-y-2 flex-1">
               {TRADITIONAL_PATH.map((s) => (
                 <li
                   key={s.step}
@@ -219,27 +218,28 @@ function Methodology() {
                 </li>
               ))}
             </ol>
-            <p className="mt-auto pt-6 text-xs text-ink-muted leading-relaxed">
-              Find a dev team → Build for 12 months → Raise money → Find customers → Run out of runway.
-              18–24 months. Most never reach revenue.
-            </p>
+            <div className="flex items-center justify-between mt-auto pt-6">
+              <span className="text-sm font-extrabold text-red-500">12–24 Months</span>
+              <span className="font-mono text-[10px] uppercase tracking-widest text-red-500">
+                High Failure Risk
+              </span>
+            </div>
           </div>
 
           {/* Spark Path */}
           <div className="border-2 border-emerald bg-white p-6 md:p-8 shadow-xl shadow-emerald/5 relative flex flex-col">
             <div className="absolute -top-3 left-6 bg-emerald px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-widest text-navy">
-              Spark Route
+              Spark Model
             </div>
             <div className="flex items-center justify-between mb-3">
               <span className="font-mono text-[10px] uppercase tracking-widest text-emerald">
-                Path / B
+                Venture Infrastructure
               </span>
-              <span className="font-mono text-[10px] uppercase tracking-widest text-ink-muted">30 DAYS TO LIVE</span>
+              <span className="font-mono text-[10px] uppercase tracking-widest text-ink-muted">
+                Path/B
+              </span>
             </div>
-            <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight mb-6">
-              Venture Infra.
-            </h3>
-            <ol className="space-y-2">
+            <ol className="space-y-2 flex-1">
               {SPARK_PATH.map((s) => (
                 <li
                   key={s.step}
@@ -250,10 +250,12 @@ function Methodology() {
                 </li>
               ))}
             </ol>
-            <p className="mt-auto pt-6 text-xs text-ink-muted leading-relaxed">
-              Pick your product → Get the full stack → Start selling in week one → First revenue by day 30.
-              You skip the build phase entirely.
-            </p>
+            <div className="flex items-center justify-between mt-auto pt-6">
+              <span className="text-sm font-extrabold text-emerald">30 Days to Live</span>
+              <span className="font-mono text-[10px] uppercase tracking-widest text-emerald">
+                Proven Foundation
+              </span>
+            </div>
           </div>
         </div>
       </div>

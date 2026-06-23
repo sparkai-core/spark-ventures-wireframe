@@ -11,18 +11,21 @@ export const TRUST_LAYER_STATS = [
 ];
 
 export const TRADITIONAL_PATH = [
-  { step: "01", label: "Find a dev team" },
-  { step: "02", label: "Build for 12 months" },
-  { step: "03", label: "Raise money" },
-  { step: "04", label: "Find customers" },
-  { step: "05", label: "Run out of runway" },
+  { step: "01", label: "Idea" },
+  { step: "02", label: "Hire Developers" },
+  { step: "03", label: "Build MVP" },
+  { step: "04", label: "Raise Capital" },
+  { step: "05", label: "Find Customers" },
+  { step: "06", label: "Hope It Works" },
 ];
 
 export const SPARK_PATH = [
-  { step: "01", label: "Pick your product" },
-  { step: "02", label: "Get the full stack" },
-  { step: "03", label: "Start selling in week one" },
-  { step: "04", label: "First revenue by day 30" },
+  { step: "01", label: "Choose Product" },
+  { step: "02", label: "Launch Brand" },
+  { step: "03", label: "Execute GTM" },
+  { step: "04", label: "Acquire Customers" },
+  { step: "05", label: "Scale Revenue" },
+  { step: "06", label: "Compound Equity" },
 ];
 
 export const STACK = [
