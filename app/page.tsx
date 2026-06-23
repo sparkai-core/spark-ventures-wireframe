@@ -378,11 +378,13 @@ function PartnershipPaths() {
                   {p.body}
                 </p>
 
-                <button
-                  className="w-full py-2 mt-auto border border-navy text-navy bg-white text-xs font-bold uppercase tracking-widest hover:bg-navy hover:text-white transition"
-                >
-                  {p.button}
-                </button>
+                <div className="mt-auto pt-8">
+                  <button
+                    className="w-full py-2 border border-navy text-navy bg-white text-xs font-bold uppercase tracking-widest hover:bg-navy hover:text-white transition"
+                  >
+                    {p.button}
+                  </button>
+                </div>
               </div>
             );
           })}
