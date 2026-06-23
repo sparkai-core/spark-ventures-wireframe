@@ -593,8 +593,11 @@ function NetworkSection() {
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight">You&rsquo;re not doing this alone.</h2>
           <p className="mx-auto max-w-2xl text-sm md:text-base text-white/60 mt-4">
             Spark sits at the centre of a connected network of founders, operators, partners, and
-            customers &mdash; all building in the same direction. When you join, you plug into the
-            whole thing.
+            customers &mdash; all building in the same direction.
+          </p>
+          <p className="mx-auto max-w-2xl text-sm md:text-base text-white/60 mt-4">
+            When you join, you plug into the whole thing. Shared knowledge, shared relationships,
+            shared momentum.
           </p>
         </div>
 

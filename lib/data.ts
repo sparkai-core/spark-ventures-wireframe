@@ -232,7 +232,7 @@ export const NETWORK_NODES = [
   { label: "Founders", color: "gold", x: 94, y: 50 },
   { label: "Operators", color: "emerald", x: 77.7, y: 84.2 },
   { label: "Customers", color: "blue", x: 40.9, y: 93.0 },
-  { label: "Investors", color: "gold", x: 10.8, y: 70.0 },
+  { label: "Community", color: "gold", x: 10.8, y: 70.0 },
   { label: "Partners", color: "emerald", x: 9.8, y: 32.1 },
   { label: "Dev Team", color: "blue", x: 38.6, y: 7.5 },
   { label: "Community", color: "gold", x: 75.9, y: 14.4 },
