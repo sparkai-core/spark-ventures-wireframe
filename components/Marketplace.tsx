@@ -44,7 +44,7 @@ export default function Marketplace() {
               <div className="font-mono text-[10px] uppercase tracking-widest text-blue mb-3">
                 [ // ] Marketplace
               </div>
-              <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight">
+              <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">
                 AI Products.
               </h1>
               <p className="mt-5 max-w-2xl text-base md:text-lg text-ink-muted">
@@ -64,7 +64,7 @@ export default function Marketplace() {
               <button
                 key={f}
                 onClick={() => onFilterChange(f)}
-                className={`shrink-0 border rounded-full px-4 py-1.5 font-mono text-[10px] uppercase tracking-widest transition ${
+                className={`shrink-0 border px-4 py-1.5 font-mono text-[10px] uppercase tracking-widest transition ${
                   filter === f
                     ? "border-navy bg-navy text-white"
                     : "border-line text-ink-muted hover:border-navy/40"
@@ -84,7 +84,7 @@ export default function Marketplace() {
                   onMouseEnter={() => setHovered(p.id)}
                   onMouseLeave={() => setHovered(null)}
                   className={`group bg-white p-6 transition-all relative min-h-[280px] ${
-                    isHover ? "shadow-[0_4px_14px_rgba(0,0,0,0.1)]" : ""
+                    isHover ? "shadow-xl shadow-navy/10" : ""
                   }`}
                   style={isHover ? { borderColor: "#2b2b2b" } : undefined}
                 >
@@ -120,9 +120,9 @@ export default function Marketplace() {
                     <div className="mt-5 pt-5 border-t border-line">
                       <a
                         href="#cta"
-                        className="block w-full text-center bg-navy text-white rounded-full py-3 font-mono text-[10px] font-bold uppercase tracking-widest hover:bg-blue transition-colors"
+                        className="inline-flex items-center gap-2 bg-navy text-white px-4 py-2 font-mono text-[10px] font-bold uppercase tracking-widest hover:bg-blue transition-colors"
                       >
-                        Book a Call
+                        Book a Call <span>→</span>
                       </a>
                     </div>
                   ) : (
@@ -136,14 +136,14 @@ export default function Marketplace() {
             })}
           </div>
 
-          <div className="mt-10 pt-6 border-t border-line flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="mt-10 flex flex-col md:flex-row items-center justify-between gap-4">
             <span className="font-mono text-[10px] uppercase tracking-widest text-ink-muted">
               Showing {String(visible.length).padStart(2, "0")} of {String(filtered.length).padStart(2, "0")} products
             </span>
             {hasMore && (
               <button
                 onClick={() => setShown((n) => n + PAGE_SIZE)}
-                className="border border-navy rounded-full text-navy px-6 py-3 font-mono text-[10px] font-bold uppercase tracking-widest hover:bg-navy hover:text-white transition"
+                className="border border-navy text-navy px-6 py-3 font-mono text-[10px] font-bold uppercase tracking-widest hover:bg-navy hover:text-white transition"
               >
                 Load More
               </button>
