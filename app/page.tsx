@@ -70,7 +70,7 @@ function Hero() {
 
         {/* Headline */}
         <h1 className="text-balance text-5xl md:text-7xl font-extrabold leading-[1.02] tracking-tight animate-fade-up-2">
-          Launch an AI Software Business in 30 Days
+          Launch an AI Software Business in <span className="text-blue">30 Days</span>
         </h1>
 
         {/* Sub */}
