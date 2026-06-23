@@ -54,8 +54,7 @@ export default function Marketplace({
   const prev = () => setCurrentIndex((i) => i - 1);
 
   return (
-    <>
-      <section id="marketplace" className="bg-white py-20 md:py-32">
+    <section id="marketplace" className="bg-white py-20 md:py-32">
         <div className="mx-auto max-w-6xl px-6">
           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-8">
             <div>
@@ -193,31 +192,5 @@ export default function Marketplace({
           </div>
         </div>
       </section>
-
-      {/* Page Bottom CTA — products page */}
-      <section id="cta" className="bg-navy py-24 md:py-32 text-white relative overflow-hidden border-t border-white/10">
-        <div className="absolute inset-0 grid-bg opacity-40" />
-        <div className="absolute -top-1/2 left-1/2 -translate-x-1/2 size-[600px] rounded-full bg-blue/10 blur-3xl" />
-        <div className="relative mx-auto max-w-3xl px-6 text-center">
-          <div className="font-mono text-[10px] uppercase tracking-widest text-emerald mb-6">
-            ● Ready to start?
-          </div>
-          <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.02]">
-            Seen something that fits?
-          </h2>
-          <p className="mx-auto max-w-xl text-base text-white/60 mt-6">
-            Book a call and we&rsquo;ll walk you through the right product for your market.
-          </p>
-          <div className="flex flex-col md:flex-row gap-3 justify-center mt-10">
-            <a
-              href="#"
-              className="bg-blue px-8 py-5 text-xs font-bold uppercase tracking-widest hover:bg-blue/90 transition"
-            >
-              Book a Call &rarr;
-            </a>
-          </div>
-        </div>
-      </section>
-    </>
   );
 }

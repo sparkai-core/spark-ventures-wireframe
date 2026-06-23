@@ -555,13 +555,13 @@ function CTASection() {
 
       <div className="relative mx-auto max-w-3xl px-6 text-center">
         <div className="font-mono text-[10px] uppercase tracking-widest text-emerald mb-6">
-          ● Applications open. 2026 cohort.
+          ● Ready to start?
         </div>
         <h2 className="text-4xl md:text-7xl font-extrabold tracking-tight leading-[1.02]">
-          You know your industry. We know how to build software companies inside it.
+          Seen something that fits?
         </h2>
         <p className="mx-auto max-w-xl text-base text-white/60 mt-6">
-          That combination is the whole point.
+          Book a call and we&rsquo;ll walk you through the right product for your market.
         </p>
         <div className="flex flex-col md:flex-row gap-3 justify-center mt-10">
           <a
