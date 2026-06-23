@@ -460,16 +460,25 @@ function FounderProfile() {
               key={p.id}
               className="bg-white p-6 md:p-8 group hover:bg-paper transition"
             >
-              <div className="flex items-center justify-between mb-6">
-                <span className="font-mono text-[10px] uppercase tracking-widest text-ink-muted">
-                  [ {p.id} ]
-                </span>
-                <span className="font-mono text-[10px] uppercase tracking-widest text-ink-muted">
-                  {p.symbol}
-                </span>
+              <div className="flex items-center gap-2 mb-6">
+                <span className="text-lg text-navy">{p.symbol}</span>
+                <h3 className="text-lg font-extrabold tracking-tight">{p.title}</h3>
               </div>
-              <h3 className="text-xl font-extrabold tracking-tight mb-3">{p.title}</h3>
-              <p className="text-sm text-ink-muted">{p.body}</p>
+              <div className="space-y-4">
+                <p className="text-sm text-navy leading-relaxed">{p.who}</p>
+                <div>
+                  <div className="font-mono text-[9px] uppercase tracking-widest text-red-500 mb-1">
+                    Problem
+                  </div>
+                  <p className="text-sm text-ink-muted leading-relaxed">{p.problem}</p>
+                </div>
+                <div>
+                  <div className="font-mono text-[9px] uppercase tracking-widest text-emerald mb-1">
+                    What changed
+                  </div>
+                  <p className="text-sm text-ink-muted leading-relaxed">{p.change}</p>
+                </div>
+              </div>
             </div>
           ))}
         </div>

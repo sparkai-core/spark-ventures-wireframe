@@ -146,14 +146,70 @@ export const PARTNERSHIPS = [
 ];
 
 export const PERSONAS = [
-  { id: "P-01", symbol: "◆", title: "The Consultant", body: "You bill by the hour and the ceiling is real. This is how you turn expertise into recurring revenue." },
-  { id: "P-02", symbol: "▲", title: "The Corporate Exec", body: "You've led teams and owned outcomes. Now you want to own the company, not the title." },
-  { id: "P-03", symbol: "●", title: "The Agency Owner", body: "Services revenue is great until it's not. Add a SaaS line that runs without your hours." },
-  { id: "P-04", symbol: "◇", title: "The Domain Expert", body: "You know an industry better than most software people ever will. That knowledge is the product." },
-  { id: "P-05", symbol: "△", title: "The Operator", body: "You've run things. You can sell things. The build phase was always the bottleneck — we removed it." },
-  { id: "P-06", symbol: "○", title: "The Tech Pro", body: "You could build it yourself. The question is whether building it yourself is the best use of two years." },
-  { id: "P-07", symbol: "◼", title: "The SaaS Founder", body: "You've done this before. You know the second product is the one that scales — and you want leverage." },
-  { id: "P-08", symbol: "✦", title: "The Sales Leader", body: "You've closed at every level. Pair that with product and infra, and you have a real company on your hands." },
+  {
+    id: "P-01",
+    symbol: "◆",
+    title: "The Consultant",
+    who: "You bill by the hour and the ceiling is real.",
+    problem: "Hourly billing caps your upside.",
+    change: "Turn expertise into recurring revenue.",
+  },
+  {
+    id: "P-02",
+    symbol: "▲",
+    title: "The Corporate Exec",
+    who: "You've led teams and owned outcomes.",
+    problem: "You're working for someone else's vision.",
+    change: "Own the company, not the title.",
+  },
+  {
+    id: "P-03",
+    symbol: "●",
+    title: "The Agency Owner",
+    who: "Services revenue is great until it's not.",
+    problem: "Services revenue caps at your hours.",
+    change: "Add a SaaS line that runs without your hours.",
+  },
+  {
+    id: "P-04",
+    symbol: "◇",
+    title: "The Domain Expert",
+    who: "You know an industry better than most software people ever will.",
+    problem: "That knowledge has been stuck in your head.",
+    change: "That knowledge is the product.",
+  },
+  {
+    id: "P-05",
+    symbol: "△",
+    title: "The Operator",
+    who: "You've run things. You can sell things.",
+    problem: "The build phase was always the bottleneck.",
+    change: "Spark removed the build phase.",
+  },
+  {
+    id: "P-06",
+    symbol: "○",
+    title: "The Tech Pro",
+    who: "You could build it yourself.",
+    problem: "Building it yourself costs two years.",
+    change: "Skip two years of build with Spark.",
+  },
+  {
+    id: "P-07",
+    symbol: "◼",
+    title: "The SaaS Founder",
+    who: "You've done this before.",
+    problem: "The second product is the one that scales.",
+    change: "Get leverage on your second product.",
+  },
+  {
+    id: "P-08",
+    symbol: "✦",
+    title: "The Sales Leader",
+    who: "You've closed at every level.",
+    problem: "Sales without product is just services.",
+    change: "Pair sales with product and infra — you have a real company.",
+  },
 ];
 
 export const SEQUENCE = [
