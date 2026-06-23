@@ -1,23 +1,19 @@
 const REASONS = [
   {
-    label: "Operator-built",
-    title: "Built by people who actually run AI businesses.",
-    body: "The team didn't design this from a whiteboard. They've built and sold AI businesses themselves. Ex-Fortune 500 AI execs, not advisors.",
+    title: "Operator-built",
+    subtitle: "Ex-Fortune 500 AI execs, not advisors",
   },
   {
-    label: "End-to-end",
-    title: "Product, GTM, and ops ship as one system.",
-    body: "Product, GTM, and ops aren't three things you bolt together. They're already integrated — you don't spend six months wiring them up.",
+    title: "End-to-end infra",
+    subtitle: "Product + GTM + Ops shipped as one system",
   },
   {
-    label: "Battle-tested",
-    title: "Same playbooks running in 24 countries.",
-    body: "Proven across 24 countries, 4 continents. What works in Chicago works in Singapore. You inherit the playbook, not the experiment.",
+    title: "Battle-tested playbooks",
+    subtitle: "Proven across 4 continents, 24 countries",
   },
   {
-    label: "Aligned",
-    title: "We make money when you make money.",
-    body: "Spark only wins when founders win. That's the whole model — fees, equity, and outcomes all flow from your revenue.",
+    title: "Aligned incentives",
+    subtitle: "Spark only wins when founders win",
   },
 ];
 
@@ -34,16 +30,21 @@ export default function TrackRecord() {
           </h2>
         </div>
 
-        <div className="grid gap-px bg-line border border-line md:grid-cols-2">
+        <div className="grid gap-px bg-line border border-line">
           {REASONS.map((r) => (
-            <div key={r.label} className="bg-white p-6 md:p-10 group hover:bg-paper transition">
-              <div className="font-mono text-[10px] uppercase tracking-widest text-blue mb-6">
-                {r.label}
+            <div
+              key={r.title}
+              className="bg-white p-6 md:p-8 group hover:bg-paper transition flex items-start gap-4"
+            >
+              <span className="size-2 rounded-full bg-navy mt-3 shrink-0" />
+              <div>
+                <h3 className="text-xl md:text-2xl font-extrabold tracking-tight">
+                  {r.title}
+                </h3>
+                <p className="text-sm md:text-base text-ink-muted mt-1">
+                  {r.subtitle}
+                </p>
               </div>
-              <h3 className="text-xl md:text-2xl font-extrabold tracking-tight mb-4">
-                {r.title}
-              </h3>
-              <p className="text-sm md:text-base text-ink-muted max-w-md">{r.body}</p>
             </div>
           ))}
         </div>
