@@ -134,7 +134,7 @@ function Hero() {
             </div>
             <div className="relative border border-white/15 bg-white/[0.02] p-4 text-left">
               <div className="font-mono text-[9px] uppercase tracking-widest mb-2 text-emerald">Output</div>
-              <div className="text-sm font-bold tracking-tight">A company you own</div>
+              <div className="text-sm font-bold tracking-tight">Venture</div>
               <div className="font-mono text-[10px] text-white/50 mt-1">Revenue · Equity</div>
             </div>
           </div>

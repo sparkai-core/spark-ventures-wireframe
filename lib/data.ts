@@ -9,12 +9,12 @@ export const HERO_STATS = [
 ];
 
 export const TRUST_LAYER_STATS = [
-  { value: "15+", label: "Products ready now" },
-  { value: "30d", label: "Launch window" },
-  { value: "04", label: "Active geographies" },
+  { value: "15+", label: "15+ products ready now" },
+  { value: "30d", label: "30-day launch window" },
+  { value: "04", label: "4 active geographies" },
   { value: "∞", label: "Shared dev team" },
-  { value: "24/7", label: "Ops backbone" },
-  { value: "MRR", label: "Recurring revenue" },
+  { value: "24/7", label: "24/7 ops backbone" },
+  { value: "MRR", label: "Recurring revenue from day one" },
 ];
 
 export const TRADITIONAL_PATH = [
