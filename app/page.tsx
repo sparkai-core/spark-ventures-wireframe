@@ -409,19 +409,13 @@ function PartnershipPaths() {
                   </div>
                 </div>
 
-                <ul className="my-8 space-y-2">
-                  {p.items.map((it) => (
-                    <li
-                      key={it}
-                      className={`flex items-center gap-3 border-t py-3 text-sm ${
-                        isPrimary ? "border-white/10 text-white/80" : "border-line text-navy"
-                      }`}
-                    >
-                      <span className={`size-1 ${isPrimary ? "bg-blue" : "bg-emerald"}`} />
-                      {it}
-                    </li>
-                  ))}
-                </ul>
+                <p
+                  className={`mt-6 text-sm leading-relaxed ${
+                    isPrimary ? "text-white/70" : "text-ink-muted"
+                  }`}
+                >
+                  {p.body}
+                </p>
 
                 <button
                   className={`w-full py-3 text-xs font-bold uppercase tracking-widest transition ${
