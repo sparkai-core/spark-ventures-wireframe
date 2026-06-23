@@ -70,7 +70,7 @@ function Hero() {
 
         {/* Headline */}
         <h1 className="text-balance text-5xl md:text-7xl font-extrabold leading-[1.02] tracking-tight animate-fade-up-2">
-          Build a software company without the two years of groundwork.
+          Launch an AI Software Business in 30 Days
         </h1>
 
         {/* Sub */}
