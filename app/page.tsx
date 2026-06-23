@@ -10,8 +10,9 @@ import {
   CASE_STUDIES,
   NETWORK_NODES,
 } from "@/lib/data";
-import Marketplace from "@/components/Marketplace";
 import FAQ from "@/components/FAQ";
+import TrackRecord from "@/components/TrackRecord";
+import FeaturedProductsPreview from "@/components/FeaturedProductsPreview";
 
 // Spark Ventures™ logo: navy square + pulsing blue dot
 function SparkLogo({ size = "size-6", dot = "size-2" }: { size?: string; dot?: string }) {
@@ -25,25 +26,37 @@ function SparkLogo({ size = "size-6", dot = "size-2" }: { size?: string; dot?: s
 // ===================== NAVBAR =====================
 function Navbar() {
   return (
-    <nav className="sticky top-0 z-50 flex items-center justify-between border-b border-navy/5 bg-white/85 px-4 py-3 backdrop-blur-md md:px-8">
-      <a href="#top" className="flex items-center gap-2">
-        <SparkLogo />
-        <span className="font-mono text-xs font-bold tracking-tighter uppercase text-navy">
-          Spark Ventures<sup className="text-[7px]">™</sup>
-        </span>
-      </a>
+    <nav className="sticky top-0 z-50 flex items-center justify-between border-b border-navy/5 bg-white/85 px-4 py-3 backdrop-blur-md md:px-8 gap-4">
+      <div className="flex items-center gap-3">
+        {/* ← Home pill — always visible so users can always get home */}
+        <a
+          href="/"
+          className="flex items-center gap-1 border border-line px-3 py-1.5 rounded-full font-mono text-[10px] uppercase tracking-widest text-ink-muted hover:border-navy/40 hover:text-navy transition"
+        >
+          ← Home
+        </a>
+        {/* Vertical separator */}
+        <div className="w-px h-4 bg-line" />
+        {/* Logo */}
+        <a href="#top" className="flex items-center gap-2">
+          <SparkLogo />
+          <span className="font-mono text-xs font-bold tracking-tighter uppercase text-navy">
+            Spark Ventures<sup className="text-[7px]">™</sup>
+          </span>
+        </a>
+      </div>
       <div className="hidden md:flex items-center gap-8 font-mono text-[10px] uppercase tracking-widest text-navy/60">
-        <a href="#marketplace" className="hover:text-navy">Marketplace</a>
-        <a href="#infrastructure" className="hover:text-navy">Infrastructure</a>
+        <a href="/products" className="hover:text-navy">Products</a>
+        <a href="#how" className="hover:text-navy">How It Works</a>
         <a href="#models" className="hover:text-navy">Partner</a>
-        <a href="#cases" className="hover:text-navy">Cases</a>
+        <a href="#cases" className="hover:text-navy">Results</a>
         <a href="#faq" className="hover:text-navy">FAQ</a>
       </div>
       <a
         href="#cta"
         className="bg-navy text-white px-4 py-2 text-[10px] font-bold uppercase tracking-widest hover:bg-blue transition-colors"
       >
-        Book Strategy
+        Book a Call
       </a>
     </nav>
   );
@@ -61,29 +74,48 @@ function Hero() {
         <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 mb-8 animate-fade-up-1">
           <span className="size-2 rounded-full bg-emerald animate-node-pulse" />
           <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-emerald">
-            AI Venture Infrastructure™ · Live
+            15 AI businesses launched · Applications open
           </span>
         </div>
 
         {/* Headline */}
         <h1 className="text-balance text-5xl md:text-7xl font-extrabold leading-[1.02] tracking-tight animate-fade-up-2">
-          Launch an AI Software <br className="hidden md:block" />
-          Business in <span className="text-blue">30 Days</span>
+          Build a software company without the two years of groundwork.
         </h1>
 
         {/* Sub */}
-        <p className="mx-auto max-w-xl text-base md:text-lg text-white/60 mt-6 animate-fade-up-3">
-          Choose from proven AI products. Get product, technology, GTM systems, operational support and
-          growth infrastructure.{" "}
-          <span className="text-white">Own the company. Keep the upside.</span>
+        <p className="mx-auto max-w-2xl text-base md:text-lg text-white/60 mt-6 animate-fade-up-3">
+          Pick a product that already works. We give you the tech, the sales system, and the operational
+          setup. You take it to market. <span className="text-white">You own the company.</span>
         </p>
 
+        {/* Founder Briefing Video */}
+        <div className="relative mx-auto mt-14 mb-10 max-w-4xl animate-fade-up-4">
+          <div className="relative aspect-video border border-white/15 bg-white/[0.02] overflow-hidden group">
+            <div className="absolute inset-0 grid-bg opacity-40" />
+            <div className="absolute inset-0 flex flex-col items-center justify-center">
+              <div className="size-20 rounded-full border-2 border-white/40 flex items-center justify-center group-hover:border-blue group-hover:bg-blue/10 transition-all">
+                <span className="text-3xl text-white ml-1">▶</span>
+              </div>
+              <span className="font-mono text-[10px] uppercase tracking-widest text-white/60 mt-6">
+                Founder Briefing
+              </span>
+              <span className="font-mono text-[9px] uppercase tracking-widest text-white/30 mt-2">
+                How Spark Ventures Works · 16:9
+              </span>
+            </div>
+            <div className="absolute bottom-0 left-0 right-0 h-px overflow-hidden">
+              <div className="h-px w-1/2 bg-blue animate-ticker" />
+            </div>
+          </div>
+        </div>
+
         {/* Flow Diagram */}
-        <div className="relative mx-auto mt-14 mb-12 max-w-3xl animate-fade-up-4">
+        <div className="relative mx-auto mb-12 max-w-3xl animate-fade-up-4">
           <div className="grid gap-2 md:grid-cols-5 md:items-stretch">
             <div className="relative border border-white/15 bg-white/[0.02] p-4 text-left">
               <div className="font-mono text-[9px] uppercase tracking-widest mb-2 text-gold">Input</div>
-              <div className="text-sm font-bold tracking-tight">Founder</div>
+              <div className="text-sm font-bold tracking-tight">What you know</div>
               <div className="font-mono text-[10px] text-white/50 mt-1">Expertise</div>
             </div>
             <div className="hidden md:flex items-center justify-center">
@@ -91,8 +123,8 @@ function Hero() {
             </div>
             <div className="relative border border-blue/60 bg-blue/5 p-4 text-left">
               <div className="font-mono text-[9px] uppercase tracking-widest mb-2 text-blue">Rail</div>
-              <div className="text-sm font-bold tracking-tight">Spark Infrastructure</div>
-              <div className="font-mono text-[10px] text-white/50 mt-1">Product · GTM · Ops · Growth</div>
+              <div className="text-sm font-bold tracking-tight">Spark Infra.</div>
+              <div className="font-mono text-[10px] text-white/50 mt-1">Product · GTM · Ops</div>
               <div className="absolute inset-x-0 bottom-0 h-px overflow-hidden">
                 <div className="h-px w-1/2 bg-blue animate-ticker" />
               </div>
@@ -102,7 +134,7 @@ function Hero() {
             </div>
             <div className="relative border border-white/15 bg-white/[0.02] p-4 text-left">
               <div className="font-mono text-[9px] uppercase tracking-widest mb-2 text-emerald">Output</div>
-              <div className="text-sm font-bold tracking-tight">Venture</div>
+              <div className="text-sm font-bold tracking-tight">A company you own</div>
               <div className="font-mono text-[10px] text-white/50 mt-1">Revenue · Equity</div>
             </div>
           </div>
@@ -114,13 +146,13 @@ function Hero() {
             href="#cta"
             className="bg-blue px-6 py-4 text-xs font-bold uppercase tracking-widest ring-1 ring-white/10 hover:bg-blue/90 transition"
           >
-            Book Founder Strategy Session
+            Book a Call
           </a>
           <a
-            href="#marketplace"
+            href="/products"
             className="border border-white/20 px-6 py-4 text-xs font-bold uppercase tracking-widest hover:bg-white/5 transition"
           >
-            Browse AI Ventures
+            Browse the Products
           </a>
         </div>
 
@@ -146,15 +178,16 @@ function TrustLayer() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <div>
             <div className="font-mono text-[10px] uppercase tracking-widest text-blue mb-3">
-              [ 01 ] Trust Layer
+              [ 01 ] The Case
             </div>
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight max-w-2xl">
-              Why build from scratch?
+              Building from scratch is a bet most people lose.
             </h2>
           </div>
           <p className="max-w-md text-sm md:text-base text-ink-muted">
-            Traditional founders spend 12–24 months building before finding customers. Our founders launch in
-            weeks on battle-tested software and GTM systems.
+            The average funded startup takes 18 months to ship something customers will pay for. Most
+            don&rsquo;t make it. We&rsquo;ve already built the product. The sales system is already working.
+            You skip straight to the part where you&rsquo;re selling.
           </p>
         </div>
 
@@ -176,14 +209,14 @@ function TrustLayer() {
 // ===================== SECTION 02: METHODOLOGY =====================
 function Methodology() {
   return (
-    <section className="bg-paper py-20 md:py-32">
+    <section id="how" className="bg-paper py-20 md:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-12 md:mb-16">
           <div className="font-mono text-[10px] uppercase tracking-widest text-blue mb-3">
-            [ 02 ] Methodology
+            [ 02 ] The Comparison
           </div>
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight max-w-2xl">
-            Most startups die before revenue.
+            Two paths. One costs you two years.
           </h2>
         </div>
 
@@ -192,9 +225,9 @@ function Methodology() {
           <div className="border border-line bg-white p-6 md:p-8">
             <div className="flex items-center justify-between mb-6">
               <h3 className="font-mono text-[10px] uppercase tracking-widest text-red-500">
-                Traditional Startup
+                Path / A — The Standard Route
               </h3>
-              <span className="font-mono text-[10px] text-ink-muted">PATH/A</span>
+              <span className="font-mono text-[10px] text-ink-muted">12–24 MO · HIGH RISK</span>
             </div>
             <ol className="space-y-2">
               {TRADITIONAL_PATH.map((s) => (
@@ -207,22 +240,22 @@ function Methodology() {
                 </li>
               ))}
             </ol>
-            <div className="mt-6 flex items-center justify-between">
-              <span className="font-bold text-red-500 text-sm">12–24 Months</span>
-              <span className="font-mono text-[10px] uppercase text-red-500">High Failure Risk</span>
-            </div>
+            <p className="mt-6 text-xs text-ink-muted leading-relaxed">
+              Find a dev team → Build for 12 months → Raise money → Find customers → Run out of runway.
+              18–24 months. Most never reach revenue.
+            </p>
           </div>
 
           {/* Spark Path */}
           <div className="border-2 border-emerald bg-white p-6 md:p-8 shadow-xl shadow-emerald/5 relative">
             <div className="absolute -top-3 left-6 bg-emerald px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-widest text-navy">
-              Spark Model
+              Spark Route
             </div>
             <div className="flex items-center justify-between mb-6">
               <h3 className="font-mono text-[10px] uppercase tracking-widest text-emerald">
-                Venture Infrastructure
+                Path / B — The Spark Route
               </h3>
-              <span className="font-mono text-[10px] text-ink-muted">PATH/B</span>
+              <span className="font-mono text-[10px] text-ink-muted">30 DAYS TO LIVE</span>
             </div>
             <ol className="space-y-2">
               {SPARK_PATH.map((s) => (
@@ -235,10 +268,10 @@ function Methodology() {
                 </li>
               ))}
             </ol>
-            <div className="mt-6 flex items-center justify-between">
-              <span className="font-bold text-emerald text-sm">30 Days to Live</span>
-              <span className="font-mono text-[10px] uppercase text-emerald">Proven Foundation</span>
-            </div>
+            <p className="mt-6 text-xs text-ink-muted leading-relaxed">
+              Pick your product → Get the full stack → Start selling in week one → First revenue by day 30.
+              You skip the build phase entirely.
+            </p>
           </div>
         </div>
       </div>
@@ -268,10 +301,10 @@ function StackSection() {
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="mb-12 md:mb-16">
           <div className="font-mono text-[10px] uppercase tracking-widest text-emerald mb-3">
-            [ 03 ] Stack
+            [ 03 ] What You Get
           </div>
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight max-w-3xl">
-            Everything required to build an AI company.
+            Four things every software company needs. Pre-built.
           </h2>
         </div>
 
@@ -281,7 +314,7 @@ function StackSection() {
               key={s.tag}
               className="bg-navy p-6 md:p-8 group hover:bg-navy-soft transition-colors"
             >
-              <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center justify-between mb-4">
                 <span
                   className={`font-mono text-[10px] uppercase tracking-widest ${accentTextClass[s.accent]}`}
                 >
@@ -289,7 +322,8 @@ function StackSection() {
                 </span>
                 <span className="font-mono text-[10px] text-white/30">{s.index}</span>
               </div>
-              <h3 className="text-2xl font-extrabold tracking-tight mb-6">{s.title}</h3>
+              <h3 className="text-2xl font-extrabold tracking-tight mb-3">{s.title}</h3>
+              <p className="text-sm text-white/60 mb-6 leading-relaxed">{s.body}</p>
               <ul className="space-y-2">
                 {s.items.map((it) => (
                   <li
@@ -316,14 +350,14 @@ function PartnershipPaths() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-12 md:mb-16">
           <div className="font-mono text-[10px] uppercase tracking-widest text-gold mb-3">
-            [ 05 ] Partnership Paths
+            [ 05 ] Your Options
           </div>
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight max-w-3xl">
-            Multiple ways to partner.
+            Two ways in. Both get you a real business.
           </h2>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-2">
           {PARTNERSHIPS.map((p) => {
             const isPrimary = p.variant === "primary";
             return (
@@ -345,7 +379,7 @@ function PartnershipPaths() {
                   </span>
                   {p.recommended && (
                     <span className="font-mono text-[10px] uppercase tracking-widest bg-blue text-white px-2 py-0.5">
-                      Recommended
+                      ★ Recommended
                     </span>
                   )}
                 </div>
@@ -408,12 +442,19 @@ function FounderProfile() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-12">
           <div className="font-mono text-[10px] uppercase tracking-widest text-blue mb-3">
-            [ 06 ] Founder Profile
+            [ 06 ] Who This Is For
           </div>
-          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight">Who this is for.</h2>
+          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight max-w-3xl">
+            This works if you know something.
+          </h2>
+          <p className="mt-5 max-w-3xl text-base text-ink-muted">
+            You don&rsquo;t need a tech background. You need domain knowledge &mdash; an industry you
+            understand well enough to close a room. The consultants, executives, and operators who do
+            best here all had that in common.
+          </p>
         </div>
 
-        <div className="grid gap-px bg-line border border-line md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-px bg-line border border-line md:grid-cols-2 lg:grid-cols-4">
           {PERSONAS.map((p) => (
             <div
               key={p.id}
@@ -423,7 +464,9 @@ function FounderProfile() {
                 <span className="font-mono text-[10px] uppercase tracking-widest text-ink-muted">
                   [ {p.id} ]
                 </span>
-                <span className="size-2 bg-navy group-hover:bg-blue transition-colors" />
+                <span className="font-mono text-[10px] uppercase tracking-widest text-ink-muted">
+                  {p.symbol}
+                </span>
               </div>
               <h3 className="text-xl font-extrabold tracking-tight mb-3">{p.title}</h3>
               <p className="text-sm text-ink-muted">{p.body}</p>
@@ -443,10 +486,10 @@ function SequenceSection() {
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="mb-12 md:mb-16">
           <div className="font-mono text-[10px] uppercase tracking-widest text-emerald mb-3">
-            [ 07 ] Sequence
+            [ 07 ] The First 30 Days
           </div>
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight max-w-3xl">
-            From idea to revenue in 30 days.
+            What actually happens from day one.
           </h2>
         </div>
 
@@ -489,10 +532,10 @@ function Portfolio() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-12 md:mb-16">
           <div className="font-mono text-[10px] uppercase tracking-widest text-blue mb-3">
-            [ 08 ] Portfolio
+            [ 08 ] Results
           </div>
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight max-w-3xl">
-            Venture launch stories.
+            Companies that didn&rsquo;t exist two years ago.
           </h2>
         </div>
 
@@ -504,20 +547,20 @@ function Portfolio() {
             >
               <div className="flex items-center justify-between mb-6">
                 <span className="font-mono text-[10px] uppercase tracking-widest text-ink-muted">
-                  [ {c.id} ]
+                  [ {c.id} ] · {c.industry}
                 </span>
                 <span className="font-mono text-[10px] uppercase tracking-widest text-emerald">
                   ● Live
                 </span>
               </div>
-              <div className="text-sm font-mono uppercase tracking-widest text-ink-muted mb-1">
-                {c.founder}
-              </div>
-              <div className="flex items-center gap-3 mb-6">
+              <div className="flex items-center gap-3 mb-3">
                 <span className="text-2xl md:text-3xl font-extrabold tracking-tight">→</span>
                 <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight">{c.name}</h3>
               </div>
-              <p className="text-sm text-ink-muted mb-6">{c.body}</p>
+              <p className="text-sm text-ink-muted mb-4">{c.body}</p>
+              <p className="text-sm italic text-navy/80 mb-6 border-l-2 border-emerald pl-4">
+                &ldquo;{c.quote}&rdquo;
+              </p>
               <div className="grid grid-cols-2 gap-px bg-line border border-line">
                 <div className="bg-white p-4">
                   <div className="font-mono text-[9px] uppercase tracking-widest text-ink-muted">
@@ -548,12 +591,13 @@ function NetworkSection() {
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="mb-12 md:mb-16 text-center">
           <div className="font-mono text-[10px] uppercase tracking-widest text-gold mb-3">
-            [ 09 ] Network
+            [ 09 ] The Network
           </div>
-          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight">More than a product.</h2>
-          <p className="mx-auto max-w-md text-sm md:text-base text-white/60 mt-4">
-            A connected network of founders, operators, partners, investors and advisors — wired through
-            Spark Ventures infrastructure.
+          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight">You&rsquo;re not doing this alone.</h2>
+          <p className="mx-auto max-w-2xl text-sm md:text-base text-white/60 mt-4">
+            Spark sits at the centre of a connected network of founders, operators, partners, and
+            customers &mdash; all building in the same direction. When you join, you plug into the
+            whole thing.
           </p>
         </div>
 
@@ -612,13 +656,13 @@ function CTASection() {
 
       <div className="relative mx-auto max-w-3xl px-6 text-center">
         <div className="font-mono text-[10px] uppercase tracking-widest text-emerald mb-6">
-          ● Ready to start?
+          ● Applications open. 2026 cohort.
         </div>
         <h2 className="text-4xl md:text-7xl font-extrabold tracking-tight leading-[1.02]">
-          Seen something that fits?
+          You know your industry. We know how to build software companies inside it.
         </h2>
         <p className="mx-auto max-w-xl text-base text-white/60 mt-6">
-          Book a call and we&rsquo;ll walk you through the right product for your market &mdash; no pitch, just fit.
+          That combination is the whole point.
         </p>
         <div className="flex flex-col md:flex-row gap-3 justify-center mt-10">
           <a
@@ -628,10 +672,10 @@ function CTASection() {
             Book a Call &rarr;
           </a>
           <a
-            href="#marketplace"
+            href="/products"
             className="border border-white/20 px-8 py-5 text-xs font-bold uppercase tracking-widest hover:bg-white/5 transition"
           >
-            Browse AI Products
+            Browse the Products
           </a>
         </div>
       </div>
@@ -664,16 +708,16 @@ function Footer() {
             </div>
             <ul className="space-y-3">
               <li className="text-xs font-bold uppercase tracking-widest hover:text-blue transition cursor-pointer">
-                Marketplace
+                Browse Products
+              </li>
+              <li className="text-xs font-bold uppercase tracking-widest hover:text-blue transition cursor-pointer">
+                How It Works
               </li>
               <li className="text-xs font-bold uppercase tracking-widest hover:text-blue transition cursor-pointer">
                 Portfolio
               </li>
               <li className="text-xs font-bold uppercase tracking-widest hover:text-blue transition cursor-pointer">
-                Methodology
-              </li>
-              <li className="text-xs font-bold uppercase tracking-widest hover:text-blue transition cursor-pointer">
-                Network
+                Apply
               </li>
             </ul>
           </div>
@@ -687,13 +731,13 @@ function Footer() {
                 About
               </li>
               <li className="text-xs font-bold uppercase tracking-widest hover:text-blue transition cursor-pointer">
-                Cohorts
+                Team
               </li>
               <li className="text-xs font-bold uppercase tracking-widest hover:text-blue transition cursor-pointer">
-                Contact
+                Infrastructure
               </li>
               <li className="text-xs font-bold uppercase tracking-widest hover:text-blue transition cursor-pointer">
-                Press
+                Careers
               </li>
             </ul>
           </div>
@@ -701,11 +745,16 @@ function Footer() {
 
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between gap-4">
           <span className="font-mono text-[10px] uppercase tracking-widest text-white/40">
-            © 2026 Spark Ventures · AI Venture Infrastructure™
+            © 2026 Spark Ventures. All rights reserved.
           </span>
-          <span className="font-mono text-[10px] uppercase tracking-widest text-white/40">
-            Mission Console v2.6
-          </span>
+          <div className="flex gap-6">
+            <span className="font-mono text-[10px] uppercase tracking-widest text-white/40 hover:text-white transition cursor-pointer">
+              Privacy Policy
+            </span>
+            <span className="font-mono text-[10px] uppercase tracking-widest text-white/40 hover:text-white transition cursor-pointer">
+              Terms
+            </span>
+          </div>
         </div>
       </div>
     </footer>
@@ -721,13 +770,14 @@ export default function Page() {
       <TrustLayer />
       <Methodology />
       <StackSection />
+      <TrackRecord />
       <PartnershipPaths />
       <FounderProfile />
       <SequenceSection />
       <Portfolio />
-      <Marketplace />
       <NetworkSection />
       <FAQ />
+      <FeaturedProductsPreview />
       <CTASection />
       <Footer />
     </main>

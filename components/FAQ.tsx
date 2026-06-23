@@ -11,10 +11,10 @@ export default function FAQ() {
       <div className="mx-auto max-w-3xl px-6">
         <div className="mb-12">
           <div className="font-mono text-[10px] uppercase tracking-widest text-blue mb-3">
-            [ 10 ] FAQ
+            [ 10 ] Honest Answers
           </div>
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight">
-            Founder questions.
+            The questions worth asking before you sign.
           </h2>
         </div>
 
