@@ -199,12 +199,12 @@ function Methodology() {
 
         <div className="grid gap-4 md:grid-cols-2">
           {/* Traditional Path */}
-          <div className="border border-line bg-white p-6 md:p-8">
+          <div className="border border-line bg-white p-6 md:p-8 flex flex-col">
             <div className="flex items-center justify-between mb-3">
               <span className="font-mono text-[10px] uppercase tracking-widest text-red-500">
                 Path / A
               </span>
-              <span className="font-mono text-[10px] text-ink-muted">12–24 MO · HIGH RISK</span>
+              <span className="font-mono text-[10px] uppercase tracking-widest text-ink-muted">12–24 MO · HIGH RISK</span>
             </div>
             <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight mb-6">
               Traditional
@@ -220,14 +220,14 @@ function Methodology() {
                 </li>
               ))}
             </ol>
-            <p className="mt-6 text-xs text-ink-muted leading-relaxed">
+            <p className="mt-auto pt-6 text-xs text-ink-muted leading-relaxed">
               Find a dev team → Build for 12 months → Raise money → Find customers → Run out of runway.
               18–24 months. Most never reach revenue.
             </p>
           </div>
 
           {/* Spark Path */}
-          <div className="border-2 border-emerald bg-white p-6 md:p-8 shadow-xl shadow-emerald/5 relative">
+          <div className="border-2 border-emerald bg-white p-6 md:p-8 shadow-xl shadow-emerald/5 relative flex flex-col">
             <div className="absolute -top-3 left-6 bg-emerald px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-widest text-navy">
               Spark Route
             </div>
@@ -235,7 +235,7 @@ function Methodology() {
               <span className="font-mono text-[10px] uppercase tracking-widest text-emerald">
                 Path / B
               </span>
-              <span className="font-mono text-[10px] text-ink-muted">30 DAYS TO LIVE</span>
+              <span className="font-mono text-[10px] uppercase tracking-widest text-ink-muted">30 DAYS TO LIVE</span>
             </div>
             <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight mb-6">
               Venture Infra.
@@ -251,7 +251,7 @@ function Methodology() {
                 </li>
               ))}
             </ol>
-            <p className="mt-6 text-xs text-ink-muted leading-relaxed">
+            <p className="mt-auto pt-6 text-xs text-ink-muted leading-relaxed">
               Pick your product → Get the full stack → Start selling in week one → First revenue by day 30.
               You skip the build phase entirely.
             </p>
