@@ -213,12 +213,12 @@ export const PERSONAS = [
 ];
 
 export const SEQUENCE = [
-  { step: "01", title: "Strategy call", body: "Product and market decision — we figure out which AI product matches your domain in 90 minutes." },
-  { step: "02", title: "Product selection", body: "Pick your vertical. You sign the agreement and the product is yours to operate." },
-  { step: "03", title: "Brand + legal", body: "Entity, brand, accounts — all set up. Banking, legal templates, the boring stack that takes weeks." },
-  { step: "04", title: "Technical handoff", body: "You get the keys. Hosting, admin, support flows, CRM — wired and tested before you touch it." },
-  { step: "05", title: "First outbound", body: "Sales system goes live. Scripts, sequences, pipeline — already proven in your vertical." },
-  { step: "06", title: "First conversations", body: "You're in market. By day 30, real customers are taking real calls with you." },
+  { step: "01", title: "Strategy call", subtitle: "Product and market decision" },
+  { step: "02", title: "Product selection", subtitle: "Pick your vertical" },
+  { step: "03", title: "Brand + legal", subtitle: "Entity, brand, accounts set up" },
+  { step: "04", title: "Technical handoff", subtitle: "You get the keys" },
+  { step: "05", title: "First outbound", subtitle: "Sales system goes live" },
+  { step: "06", title: "First conversations", subtitle: "You're in market" },
 ];
 
 export const CASE_STUDIES = [

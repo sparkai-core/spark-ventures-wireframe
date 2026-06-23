@@ -503,30 +503,18 @@ function SequenceSection() {
         </div>
 
         <div className="relative">
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-white/10" />
-          <ol className="space-y-10 md:space-y-16">
-            {SEQUENCE.map((s, i) => {
-              const flip = i % 2 === 1;
-              return (
-                <li
-                  key={s.step}
-                  className={`relative md:grid md:grid-cols-2 md:gap-12 ${
-                    flip ? "md:[&>:first-child]:order-2" : ""
-                  }`}
-                >
-                  <div className="pl-12 md:pl-0 md:text-right">
-                    <div className="font-mono text-[10px] uppercase tracking-widest text-blue mb-2">
-                      Step {s.step}
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight">{s.title}</h3>
-                  </div>
-                  <div className="pl-12 md:pl-12 mt-3 md:mt-0 relative">
-                    <span className="absolute left-2 md:left-0 top-1.5 size-4 -translate-x-1/2 md:-translate-x-1/2 rounded-full bg-blue ring-4 ring-navy" />
-                    <p className="text-sm md:text-base text-white/60 max-w-md">{s.body}</p>
-                  </div>
-                </li>
-              );
-            })}
+          <ol className="grid grid-cols-1 md:grid-cols-6 gap-8 md:gap-4">
+            {SEQUENCE.map((s) => (
+              <li key={s.step} className="relative">
+                <div className="size-12 rounded-full border-2 border-blue flex items-center justify-center mb-4 bg-navy">
+                  <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-blue">
+                    {s.step}
+                  </span>
+                </div>
+                <h3 className="text-base font-extrabold tracking-tight mb-1">{s.title}</h3>
+                <p className="text-sm text-white/60 leading-relaxed">{s.subtitle}</p>
+              </li>
+            ))}
           </ol>
         </div>
       </div>
