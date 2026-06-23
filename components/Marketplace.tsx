@@ -15,8 +15,6 @@ const dotColor: Record<ProductAccent, string> = {
   gold: "bg-gold",
 };
 
-const PAGE_SIZE = 6;
-
 export default function Marketplace({
   eyebrow = "[ // ] Marketplace",
   title = "AI Products.",
@@ -25,7 +23,6 @@ export default function Marketplace({
   title?: string;
 }) {
   const [filter, setFilter] = useState("All Systems");
-  const [shown, setShown] = useState(PAGE_SIZE);
   const [hovered, setHovered] = useState<string | null>(null);
 
   const filtered =
@@ -33,17 +30,9 @@ export default function Marketplace({
       ? PRODUCTS
       : PRODUCTS.filter((p) => p.category === filter);
 
-  const visible = filtered.slice(0, shown);
-  const hasMore = shown < filtered.length;
-
-  const onFilterChange = (f: string) => {
-    setFilter(f);
-    setShown(PAGE_SIZE);
-  };
-
   return (
     <>
-      <section id="marketplace" className="bg-white py-20 md:py-32">
+      <section id="marketplace" className="bg-white py-20 md:py-32 overflow-hidden">
         <div className="mx-auto max-w-6xl px-6">
           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-8">
             <div>
@@ -69,7 +58,7 @@ export default function Marketplace({
             {MARKETPLACE_FILTERS.map((f) => (
               <button
                 key={f}
-                onClick={() => onFilterChange(f)}
+                onClick={() => setFilter(f)}
                 className={`shrink-0 border px-4 py-1.5 font-mono text-[10px] uppercase tracking-widest transition ${
                   filter === f
                     ? "border-navy bg-navy text-white"
@@ -81,79 +70,68 @@ export default function Marketplace({
             ))}
           </div>
 
-          <div className="grid gap-px bg-line border border-line md:grid-cols-2 lg:grid-cols-3">
-            {visible.map((p) => {
-              const isHover = hovered === p.id;
-              return (
-                <article
-                  key={p.id}
-                  onMouseEnter={() => setHovered(p.id)}
-                  onMouseLeave={() => setHovered(null)}
-                  className={`group bg-white p-6 transition-all relative min-h-[280px] ${
-                    isHover ? "shadow-xl shadow-navy/10" : ""
-                  }`}
-                  style={isHover ? { borderColor: "#2b2b2b" } : undefined}
-                >
-                  <div className="flex items-start justify-between mb-5">
-                    <div>
-                      <div className="font-mono text-[10px] uppercase tracking-widest text-ink-muted mb-1">
-                        [{p.id}] · {p.category}
+          {/* Infinite carousel — 5 cards visible per row, auto-scrolls and loops */}
+          <div className="overflow-hidden border border-line">
+            <div className="flex w-max animate-infinite-scroll">
+              {[...filtered, ...filtered].map((p, i) => {
+                const isHover = hovered === p.id;
+                return (
+                  <article
+                    key={`${p.id}-${i}`}
+                    onMouseEnter={() => setHovered(p.id)}
+                    onMouseLeave={() => setHovered(null)}
+                    className={`group bg-white p-6 transition-all relative shrink-0 w-[260px] lg:w-[220px] border-r border-line min-h-[280px] ${
+                      isHover ? "shadow-xl shadow-navy/10" : ""
+                    }`}
+                    style={isHover ? { borderColor: "#2b2b2b" } : undefined}
+                  >
+                    <div className="flex items-start justify-between mb-5">
+                      <div>
+                        <div className="font-mono text-[10px] uppercase tracking-widest text-ink-muted mb-1">
+                          [{p.id}] · {p.category}
+                        </div>
+                        <h3 className="text-xl font-extrabold tracking-tight">{p.name}</h3>
                       </div>
-                      <h3 className="text-xl font-extrabold tracking-tight">{p.name}</h3>
+                      <span className={`font-mono text-[9px] uppercase tracking-widest ${statusColor[p.status]}`}>
+                        ● {p.status}
+                      </span>
                     </div>
-                    <span className={`font-mono text-[9px] uppercase tracking-widest ${statusColor[p.status]}`}>
-                      ● {p.status}
-                    </span>
-                  </div>
-                  <p className="text-sm text-ink-muted mb-6 min-h-[3.5rem]">
-                    {isHover ? p.benefit : p.description}
-                  </p>
-                  <div className="grid grid-cols-3 gap-px bg-line border border-line">
-                    <div className="bg-white p-3">
-                      <div className="font-mono text-[9px] uppercase tracking-widest text-ink-muted">Market</div>
-                      <div className="text-xs font-bold text-navy mt-1">{p.market}</div>
+                    <p className="text-sm text-ink-muted mb-6 min-h-[3.5rem]">
+                      {isHover ? p.benefit : p.description}
+                    </p>
+                    <div className="grid grid-cols-3 gap-px bg-line border border-line">
+                      <div className="bg-white p-3">
+                        <div className="font-mono text-[9px] uppercase tracking-widest text-ink-muted">Market</div>
+                        <div className="text-xs font-bold text-navy mt-1">{p.market}</div>
+                      </div>
+                      <div className="bg-white p-3">
+                        <div className="font-mono text-[9px] uppercase tracking-widest text-ink-muted">Launch</div>
+                        <div className="text-xs font-bold text-navy mt-1">{p.launch}</div>
+                      </div>
+                      <div className="bg-white p-3">
+                        <div className="font-mono text-[9px] uppercase tracking-widest text-ink-muted">Model</div>
+                        <div className="text-xs font-bold text-navy mt-1">{p.model}</div>
+                      </div>
                     </div>
-                    <div className="bg-white p-3">
-                      <div className="font-mono text-[9px] uppercase tracking-widest text-ink-muted">Launch</div>
-                      <div className="text-xs font-bold text-navy mt-1">{p.launch}</div>
-                    </div>
-                    <div className="bg-white p-3">
-                      <div className="font-mono text-[9px] uppercase tracking-widest text-ink-muted">Model</div>
-                      <div className="text-xs font-bold text-navy mt-1">{p.model}</div>
-                    </div>
-                  </div>
-                  {isHover ? (
-                    <div className="mt-5 pt-5 border-t border-line">
-                      <a
-                        href="#cta"
-                        className="inline-flex items-center gap-2 bg-navy text-white px-4 py-2 font-mono text-[10px] font-bold uppercase tracking-widest hover:bg-blue transition-colors"
-                      >
-                        Book a Call <span>→</span>
-                      </a>
-                    </div>
-                  ) : (
-                    <div className="mt-5 flex items-center justify-between font-mono text-[10px] uppercase tracking-widest">
-                      <span className="text-ink-muted">Review Thesis</span>
-                      <span className="text-navy group-hover:text-blue transition">→</span>
-                    </div>
-                  )}
-                </article>
-              );
-            })}
-          </div>
-
-          <div className="mt-10 flex flex-col md:flex-row items-center justify-between gap-4">
-            <span className="font-mono text-[10px] uppercase tracking-widest text-ink-muted">
-              Showing {String(visible.length).padStart(2, "0")} of {String(filtered.length).padStart(2, "0")} products
-            </span>
-            {hasMore && (
-              <button
-                onClick={() => setShown((n) => n + PAGE_SIZE)}
-                className="border border-navy text-navy px-6 py-3 font-mono text-[10px] font-bold uppercase tracking-widest hover:bg-navy hover:text-white transition"
-              >
-                Load More
-              </button>
-            )}
+                    {isHover ? (
+                      <div className="mt-5 pt-5 border-t border-line">
+                        <a
+                          href="#cta"
+                          className="inline-flex items-center gap-2 bg-navy text-white px-4 py-2 font-mono text-[10px] font-bold uppercase tracking-widest hover:bg-blue transition-colors"
+                        >
+                          Book a Call <span>→</span>
+                        </a>
+                      </div>
+                    ) : (
+                      <div className="mt-5 flex items-center justify-between font-mono text-[10px] uppercase tracking-widest">
+                        <span className="text-ink-muted">Review Thesis</span>
+                        <span className="text-navy group-hover:text-blue transition">→</span>
+                      </div>
+                    )}
+                  </article>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>

@@ -55,6 +55,10 @@ const config: Config = {
           '0%': { opacity: '0', transform: 'translateY(14px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+        "infinite-scroll": {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
       },
       animation: {
         ticker: 'ticker 3s linear infinite',
@@ -62,6 +66,7 @@ const config: Config = {
         "fade-in": "fade-in 0.3s ease-out",
         orbit: "orbit 24s linear infinite",
         "fade-up": "fade-up 0.6s ease-out forwards",
+        "infinite-scroll": "infinite-scroll 25s linear infinite",
       },
       backgroundImage: {
         "grid-bg":
