@@ -520,7 +520,7 @@ function NetworkSection() {
                 className="absolute -translate-x-1/2 -translate-y-1/2"
                 style={{ left: `${n.x}%`, top: `${n.y}%` }}
               >
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center animate-orbit">
                   <div className={`size-3 ${accentDotClass[n.color]} ring-4 ring-navy`} />
                   <span className="font-mono text-[9px] uppercase tracking-widest text-white/70 mt-2 whitespace-nowrap">
                     {n.label}
