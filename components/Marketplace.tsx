@@ -39,12 +39,12 @@ export default function Marketplace() {
     <>
       <section id="marketplace" className="bg-white py-20 md:py-32">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-8">
+          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-8">
             <div>
               <div className="font-mono text-[10px] uppercase tracking-widest text-blue mb-3">
                 [ // ] Marketplace
               </div>
-              <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">
+              <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight">
                 AI Products.
               </h1>
               <p className="mt-5 max-w-2xl text-base md:text-lg text-ink-muted">
@@ -52,17 +52,19 @@ export default function Marketplace() {
                 live, tested, and ready to take to customers.
               </p>
             </div>
-            <div className="font-mono text-[10px] uppercase tracking-widest text-ink-muted">
-              Ref Index · SV-2026 · {String(filtered.length).padStart(2, "0")} / {String(PRODUCTS.length).padStart(2, "0")}
+            <div className="font-mono text-[10px] uppercase tracking-widest text-ink-muted text-right whitespace-nowrap">
+              Ref Index · SV-2026
+              <br />
+              {String(filtered.length).padStart(2, "0")} / {String(PRODUCTS.length).padStart(2, "0")}
             </div>
           </div>
 
-          <div className="flex gap-2 overflow-x-auto pb-6 scrollbar-hide mb-8 -mx-6 px-6">
+          <div className="flex flex-wrap gap-2 mb-10">
             {MARKETPLACE_FILTERS.map((f) => (
               <button
                 key={f}
                 onClick={() => onFilterChange(f)}
-                className={`shrink-0 border px-4 py-1.5 font-mono text-[10px] uppercase tracking-widest transition ${
+                className={`shrink-0 border rounded-full px-4 py-1.5 font-mono text-[10px] uppercase tracking-widest transition ${
                   filter === f
                     ? "border-navy bg-navy text-white"
                     : "border-line text-ink-muted hover:border-navy/40"
