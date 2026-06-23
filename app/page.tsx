@@ -10,7 +10,6 @@ import {
 } from "@/lib/data";
 import FAQ from "@/components/FAQ";
 import TrackRecord from "@/components/TrackRecord";
-import FeaturedProductsPreview from "@/components/FeaturedProductsPreview";
 import Marketplace from "@/components/Marketplace";
 
 // Spark Ventures™ logo: navy square + pulsing blue dot
@@ -684,7 +683,6 @@ export default function Page() {
       <Marketplace eyebrow="Marketplace" title="Choose your AI venture." />
       <NetworkSection />
       <FAQ />
-      <FeaturedProductsPreview />
       <CTASection />
       <Footer />
     </main>

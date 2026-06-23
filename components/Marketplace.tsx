@@ -190,6 +190,16 @@ export default function Marketplace({
               / {String(filtered.length).padStart(2, "0")}
             </span>
           </div>
+
+          {/* Browse All Products */}
+          <div className="mt-8 flex justify-center">
+            <a
+              href="/products"
+              className="border border-navy text-navy px-6 py-3 font-mono text-[10px] font-bold uppercase tracking-widest hover:bg-navy hover:text-white transition"
+            >
+              Browse All Products
+            </a>
+          </div>
         </div>
       </section>
   );
